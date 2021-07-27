@@ -1,0 +1,1 @@
+# Prisma Enum Generator
