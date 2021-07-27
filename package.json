@@ -1,13 +1,27 @@
 {
   "name": "prisma-enum-generator",
   "version": "0.0.0-development",
+  "author": "ajmnz <arnau@ajb.cat>",
+  "license": "MIT",
+  "homepage": "https://github.com/ajmnz/prisma-enum-generator#readme",
+  "description": "Automatically generate enums with your Prisma model names.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ajmnz/prisma-enum-generator"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "branches": [
+      "main"
+    ]
   },
+  "keywords": [
+    "prisma",
+    "prisma generator",
+    "prisma typescript",
+    "prisma enum",
+    "enums"
+  ],
   "scripts": {
     "watch": "tsc -w",
     "start": "node dist/index.js",
