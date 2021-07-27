@@ -12,7 +12,6 @@ generator client {
 
 generator enum {
   provider = "node ./dist/index.js"
-  output   = "./test"
 }
 
 model User {

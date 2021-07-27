@@ -2,6 +2,7 @@ import { generatorHandler } from "@prisma/generator-helper";
 import prettier from "prettier";
 import fs from "fs";
 import path from "path";
+import { firstLower } from "./utils";
 
 generatorHandler({
   onManifest() {
@@ -15,13 +16,21 @@ generatorHandler({
     const output = options.generator.output?.value;
 
     if (output) {
-      let content = "export enum ModelNames {\n";
+      let uContent = "export enum ModelNamesUpper {\n";
+      let lContent = "export enum ModelNamesLower {\n";
+      let tContent = "export type TModelNames =";
 
       models.forEach((m) => {
-        content += `${m} = "${m}",\n`;
+        uContent += `${m} = "${m}",\n`;
+        lContent += `${firstLower(m)} = "${firstLower(m)}",\n`;
+        tContent += ` "${m}" |`;
       });
 
-      content += "}\n";
+      uContent += "}\n\n";
+      lContent += "}\n\n";
+      tContent = tContent.substring(0, tContent.length - 1) + ";";
+
+      let content = uContent + lContent + tContent;
 
       try {
         content = prettier.format(content, {
