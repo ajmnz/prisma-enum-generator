@@ -122,3 +122,4 @@ export enum ModelNamesLower {
 
 export type TModelNames = "User" | "Role" | "Bio" | "Post" | "Tag" | "Comment";
 ```
+
