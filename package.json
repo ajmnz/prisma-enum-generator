@@ -39,8 +39,8 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "@types/node": "16.4.3",
-    "@types/prettier": "2.3.2",
+    "@types/node": "16.18.115",
+    "@types/prettier": "2.7.3",
     "@typescript-eslint/eslint-plugin": "4.29.1",
     "@typescript-eslint/parser": "4.29.1",
     "eslint": "7.32.0",
